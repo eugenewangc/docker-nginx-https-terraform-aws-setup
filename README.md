@@ -15,8 +15,11 @@ terraform apply
 - init-letsencrypt.sh
 
 #### MODIFY PARAMS: DOMAIN, EMAIL IN FILES ####
+eugene.wang -> yourdomain.com <br/>
+contact@eugene.wang -> mail@yourdomain.com
 - nginx/conf/app.conf
-- init-letsencrypt.sh
+- init-letsencrypt.sh <br/>
+
 
 #### INSTALL DOCKER ON EC2 INSTANCE ####
 sudo apt-get update<br/>
