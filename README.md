@@ -36,7 +36,7 @@ sudo chmod +x init-letsencrypt.sh <br/>
 sudo ./init-letsencrypt.sh
 
 #### DNS RECORD EDIT ####
-Point youdomain.com to the EC2's public IP address
+Point youdomain.com to the EC2's public IP address.
 
 #### VERIFY ####
 Go to yourdomain.com. You should see "Welcome to nginx!" page loaded with https.
