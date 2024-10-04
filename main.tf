@@ -5,6 +5,15 @@ terraform {
       version = "~> 4.16"
     }
   }
+  backend "s3" {
+    bucket = "S3-BUCKET-NAME"
+    key = "your/path/to/key/terraform.tfstate"
+    region = "us-west-2"
+    dynamodb_table = "DYNAMODB-TABLE-NAME"
+    assume_role = {
+      role_arn = "IAM-ROLE-ARN"
+    }
+  }
 
   required_version = ">= 1.2.0"
 }
@@ -56,3 +65,9 @@ resource "aws_instance" "app_server" {
   }
 }
 
+
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = aws_instance.app_server.id
+  allocation_id = "ALLOCATION-ID"
+  allow_reassociation = true
+}
